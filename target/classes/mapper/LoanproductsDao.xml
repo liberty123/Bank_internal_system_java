@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.LoanproductsDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.LoanproductsEntity" id="loanproductsMap">
+        <result property="productname" column="productname"/>
+        <result property="productclassification" column="productclassification"/>
+        <result property="productimage" column="productimage"/>
+        <result property="productnature" column="productnature"/>
+        <result property="loanmethod" column="loanmethod"/>
+        <result property="loaninterestrate" column="loaninterestrate"/>
+        <result property="loanamount" column="loanamount"/>
+        <result property="releasedate" column="releasedate"/>
+        <result property="branchname" column="branchname"/>
+        <result property="branchaddress" column="branchaddress"/>
+        <result property="productintroduction" column="productintroduction"/>
+        <result property="clicktime" column="clicktime"/>
+        <result property="clicknum" column="clicknum"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.LoanproductsVO" >
+		SELECT * FROM loanproducts  loanproducts         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.LoanproductsVO" >
+		SELECT  loanproducts.* FROM loanproducts  loanproducts 	
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.LoanproductsView" >
+
+		SELECT  loanproducts.* FROM loanproducts  loanproducts 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.LoanproductsView" >
+		SELECT * FROM loanproducts  loanproducts <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+</mapper>

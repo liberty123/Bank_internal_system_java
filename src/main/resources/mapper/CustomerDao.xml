@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.CustomerDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.CustomerEntity" id="customerMap">
+        <result property="customernumber" column="customernumber"/>
+        <result property="name" column="name"/>
+        <result property="password" column="password"/>
+        <result property="gender" column="gender"/>
+        <result property="phonenumber" column="phonenumber"/>
+        <result property="touxiang" column="touxiang"/>
+        <result property="idcard" column="idcard"/>
+        <result property="intention" column="intention"/>
+        <result property="deposit" column="deposit"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.CustomerVO" >
+		SELECT * FROM customer  customer         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.CustomerVO" >
+		SELECT  customer.* FROM customer  customer 	
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.CustomerView" >
+
+		SELECT  customer.* FROM customer  customer 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.CustomerView" >
+		SELECT * FROM customer  customer <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+</mapper>

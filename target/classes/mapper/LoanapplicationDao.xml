@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.LoanapplicationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.LoanapplicationEntity" id="loanapplicationMap">
+        <result property="loannumber" column="loannumber"/>
+        <result property="productname" column="productname"/>
+        <result property="productclassification" column="productclassification"/>
+        <result property="productnature" column="productnature"/>
+        <result property="loanmethod" column="loanmethod"/>
+        <result property="loaninterestrate" column="loaninterestrate"/>
+        <result property="loanpaymentamount" column="loanpaymentamount"/>
+        <result property="branchname" column="branchname"/>
+        <result property="branchaddress" column="branchaddress"/>
+        <result property="customernumber" column="customernumber"/>
+        <result property="name" column="name"/>
+        <result property="phonenumber" column="phonenumber"/>
+        <result property="idcard" column="idcard"/>
+        <result property="relatedinformation" column="relatedinformation"/>
+        <result property="applicationtime" column="applicationtime"/>
+        <result property="loannumber" column="loannumber"/>
+        <result property="productname" column="productname"/>
+        <result property="productclassification" column="productclassification"/>
+        <result property="productnature" column="productnature"/>
+        <result property="loanmethod" column="loanmethod"/>
+        <result property="loaninterestrate" column="loaninterestrate"/>
+        <result property="loanpaymentamount" column="loanpaymentamount"/>
+        <result property="branchname" column="branchname"/>
+        <result property="branchaddress" column="branchaddress"/>
+        <result property="customernumber" column="customernumber"/>
+        <result property="name" column="name"/>
+        <result property="phonenumber" column="phonenumber"/>
+        <result property="idcard" column="idcard"/>
+        <result property="relatedinformation" column="relatedinformation"/>
+        <result property="applicationtime" column="applicationtime"/>
+        <result property="shh" column="shh"/>
+        <result property="loanamnt" column="loanamnt"/>
+        <result property="term" column="term"/>
+        <result property="intrate" column="intrate"/>
+        <result property="installment" column="installment"/>
+        <result property="grade" column="grade"/>
+        <result property="subGrade" column="sub_grade"/>
+        <result property="subgradehip" column="subgradehip"/>
+        <result property="annualinc" column="annualinc"/>
+        <result property="verificationstatus" column="verificationstatus"/>
+        <result property="issued" column="issued"/>
+        <result property="loanstatus" column="loanstatus"/>
+        <result property="purpose" column="purpose"/>
+        <result property="dti" column="dti"/>
+        <result property="earliestcrline" column="earliestcrline"/>
+        <result property="open" column="open"/>
+        <result property="pub" column="pub"/>
+        <result property="revolbal" column="revolbal"/>
+        <result property="revolutil" column="revolutil"/>
+        <result property="totalacc" column="totalacc"/>
+        <result property="initialliststatus" column="initialliststatus"/>
+        <result property="applicationtype" column="applicationtype"/>
+        <result property="pubrecbankruptcies" column="pubrecbankruptcies"/>
+        <result property="mortacc" column="mortacc"/>
+        <result property="sfsh" column="sfsh"/>
+        <result property="shhf" column="shhf"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.LoanapplicationVO" >
+		SELECT * FROM loanapplication  loanapplication         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.LoanapplicationVO" >
+		SELECT  loanapplication.* FROM loanapplication  loanapplication 	
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.LoanapplicationView" >
+
+		SELECT  loanapplication.* FROM loanapplication  loanapplication 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.LoanapplicationView" >
+		SELECT * FROM loanapplication  loanapplication <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+</mapper>
