@@ -256,7 +256,7 @@ export default {
 
     init () {
         this.sfshOptions = "是,否,To be reviewed".split(',');
-          this.leavetypeOptions = "事假,病假".split(',')
+          this.leavetypeOptions = "leave for personal affairs,sick leave".split(',')
     },
     search() {
       this.pageIndex = 1;

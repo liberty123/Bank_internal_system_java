@@ -99,7 +99,7 @@
     created() {
       this.indexQueryCondition = this.$route.query.indexQueryCondition ? this.$route.query.indexQueryCondition : '';
       this.baseUrl = this.$config.baseUrl;
-	    this.leavetypeOptions = '事假,病假'.split(',');
+	    this.leavetypeOptions = 'leave for personal affairs,sick leave'.split(',');
       this.getFenlei();
       this.getList(1, 'All');
     },

@@ -297,7 +297,7 @@ export default {
 				}
 			});
 			
-            this.leavetypeOptions = "事假,病假".split(',')
+            this.leavetypeOptions = "leave for personal affairs,sick leave".split(',')
 			
 		},
     // 多级联动参数
