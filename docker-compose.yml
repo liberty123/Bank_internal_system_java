@@ -1,0 +1,42 @@
+version: "3"
+services:
+  mysql:
+    restart: always
+    image: mysql:5.7.18
+    container_name: mysql-lable
+    volumes:
+      - /apps/mysql/mydir:/mydir
+      - /apps/mysql/datadir:/var/lib/mysql
+      - /apps/mysql/conf/my.cnf:/etc/my.cnf
+      # 数据库还原目录 可将需要还原的sql文件放在这里
+      - /apps/mysql/source:/docker-entrypoint-initdb.d
+    environment:
+      - "MYSQL_ROOT_PASSWORD="
+      - "MYSQL_DATABASE=springbootc004o809"
+      - "TZ=Asia/Shanghai"
+    ports:
+      - 3306:3306
+  db:
+    image: postgres:9.4
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - backend
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+  WebSite:
+    image: 86c4fb463e2d
+    ports:
+      - "8080:8080"
+    stop_grace_period: 1m30s
+    volumes:
+      - "/var/tmp/jdk:/var/tmp/jdk"
+    command:  nohup java -jar app.jar &
+
+  python:
+    image: db29982cbf80
+    command: nohup python main.py &
+    hostname: predict_python
+    container_name: predict_python:v2
