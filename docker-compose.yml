@@ -16,15 +16,7 @@ services:
       - "TZ=Asia/Shanghai"
     ports:
       - 3306:3306
-  db:
-    image: postgres:9.4
-    volumes:
-      - db-data:/var/lib/postgresql/data
-    networks:
-      - backend
-    deploy:
-      placement:
-        constraints: [node.role == manager]
+
 
   WebSite:
     image: 86c4fb463e2d
@@ -34,6 +26,7 @@ services:
     volumes:
       - "/var/tmp/jdk:/var/tmp/jdk"
     command:  nohup java -jar app.jar &
+
 
   python:
     image: db29982cbf80

@@ -28,3 +28,4 @@ replay_pid*
 db/
 javaimage/
 META-INF/
+target/classes/static/upload/

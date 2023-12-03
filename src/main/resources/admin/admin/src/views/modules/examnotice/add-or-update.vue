@@ -251,7 +251,7 @@ export default {
 				}
 			});
 			
-            this.examtypeOptions = "Online Exam,线下考试".split(',')
+            this.examtypeOptions = "Online Exam,Offline Exam".split(',')
 			
 		},
     // 多级联动参数

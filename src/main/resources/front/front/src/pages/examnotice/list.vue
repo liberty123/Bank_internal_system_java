@@ -87,7 +87,7 @@
     created() {
       this.indexQueryCondition = this.$route.query.indexQueryCondition ? this.$route.query.indexQueryCondition : '';
       this.baseUrl = this.$config.baseUrl;
-	    this.examtypeOptions = 'Online Exam,线下考试'.split(',');
+	    this.examtypeOptions = 'Online Exam,Offline Exam'.split(',');
       this.getFenlei();
       this.getList(1, 'All');
     },
