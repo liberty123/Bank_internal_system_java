@@ -22,8 +22,8 @@
 					<div :style='{"color":"#fff","fontSize":"16px"}'>
                     {{detail.bankname}}
                     </div>
-					<div @click="storeup(1)" v-show="!isStoreup" :style='{"borderRadius":"4px","padding":"8px 8px","background":"none"}'><i v-if="true" :style='{"color":"#fff","fontSize":"14px"}' class="el-icon-star-off"></i><span :style='{"color":"#fff","fontSize":"14px"}'>点我收藏</span></div>
-					<div @click="storeup(-1)" v-show="isStoreup" :style='{"borderRadius":"4px","padding":"8px 8px","background":"none"}'><i v-if="true" :style='{"color":"#fff","fontSize":"14px"}' class="el-icon-star-on"></i><span :style='{"color":"#fff","fontSize":"14px"}'>cancel收藏</span></div>
+					<div @click="storeup(1)" v-show="!isStoreup" :style='{"borderRadius":"4px","padding":"8px 8px","background":"none"}'><i v-if="true" :style='{"color":"#fff","fontSize":"14px"}' class="el-icon-star-off"></i><span :style='{"color":"#fff","fontSize":"14px"}'>collection</span></div>
+					<div @click="storeup(-1)" v-show="isStoreup" :style='{"borderRadius":"4px","padding":"8px 8px","background":"none"}'><i v-if="true" :style='{"color":"#fff","fontSize":"14px"}' class="el-icon-star-on"></i><span :style='{"color":"#fff","fontSize":"14px"}'>uncollections</span></div>
 				</div>
 
 				<div class="item" :style='{"padding":"10px","margin":"0 0 10px 0","background":"none","justifyContent":"spaceBetween","display":"flex"}'>

@@ -1740,13 +1740,13 @@
           return LunarUtil.getXunKong(this.getDayInGanZhiExact2());
         },
         toString:function(){
-          return this.getYearInChinese()+'年'+this.getMonthInChinese()+'月'+this.getDayInChinese();
+          return this.getYearInChinese()+'year'+this.getMonthInChinese()+'month'+this.getDayInChinese();
         },
         toFullString:function(){
           var s = this.toString();
-          s += ' '+this.getYearInGanZhi()+'('+this.getYearShengXiao()+')年';
-          s += ' '+this.getMonthInGanZhi()+'('+this.getMonthShengXiao()+')月';
-          s += ' '+this.getDayInGanZhi()+'('+this.getDayShengXiao()+')日';
+          s += ' '+this.getYearInGanZhi()+'('+this.getYearShengXiao()+')year';
+          s += ' '+this.getMonthInGanZhi()+'('+this.getMonthShengXiao()+')month';
+          s += ' '+this.getDayInGanZhi()+'('+this.getDayShengXiao()+')day';
           s += ' '+this.getTimeZhi()+'('+this.getTimeShengXiao()+')时';
           s += ' 纳音['+this.getYearNaYin()+' '+this.getMonthNaYin()+' '+this.getDayNaYin()+' '+this.getTimeNaYin()+']';
           s += ' 星期'+this.getWeekInChinese();
@@ -2103,7 +2103,7 @@
           return this.getYear()+'.'+this.getMonth()+'.'+this.getIndex();
         },
         toFullString:function(){
-          return this.getYear()+'年'+this.getMonth()+'月第'+this.getIndex()+'周';
+          return this.getYear()+'year'+this.getMonth()+'月第'+this.getIndex()+'周';
         }
       };
     };

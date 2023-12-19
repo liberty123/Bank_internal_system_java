@@ -93,7 +93,8 @@ export default {
         var hours = date.getHours() >= 10 ? date.getHours().toString() : "0" + date.getHours();
         var minutes = date.getMinutes() >= 10 ? date.getMinutes().toString() : "0" + date.getMinutes();
         var seconds = date.getSeconds() >= 10 ? date.getSeconds().toString() : "0" + date.getSeconds();
-        let arr = ["日", "一", "二", "三", "四", "五", "六"];
+        let arr = ["Sunday", "Monday", "Tuesday", "Thursday", "Thursday", "Friday", "Saturday"];
+        // let arr = ["日", "一", "二", "三", "四", "五", "六"];
         let d = arr[date.getDay()]
         return date.getFullYear() + "year" + (date.getMonth() + 1) + "月" + date.getDate() + '日' + ' ' + ' ' + '星期' + d  + ' ' + "  " + hours + ":" + minutes + ":" + seconds
     },
